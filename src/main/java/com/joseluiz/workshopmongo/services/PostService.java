@@ -1,5 +1,7 @@
 package com.joseluiz.workshopmongo.services;
 
+/*findByTitleContainingIgnoreCase(text)*/
+
 import java.util.List;
 import java.util.Optional;
 
@@ -22,7 +24,7 @@ public class PostService {
 	}
 	
 	public List<Post> findByTitle(String text){
-		return repo.findByTitleContainingIgnoreCase(text);
+		return repo.searchTitle(text);
 	} 
 
 }
